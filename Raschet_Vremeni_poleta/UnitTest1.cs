@@ -35,7 +35,7 @@ public class Tests
 
         double calcT = CalcT(v, g);
         
-        Assert.AreEqual(t, calcT, 1);
+        Assert.AreEqual(t, calcT, 0);
 
     }
 }
