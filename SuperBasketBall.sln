@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperBasketBall", "SuperBasketBall\SuperBasketBall.csproj", "{AB53F8AA-6768-4DEE-8BBB-3FD54B663712}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raschet_Vremeni_poleta", "Raschet_Vremeni_poleta\Raschet_Vremeni_poleta.csproj", "{F3F0582B-1078-4672-A1B0-0621344EF136}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{AB53F8AA-6768-4DEE-8BBB-3FD54B663712}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB53F8AA-6768-4DEE-8BBB-3FD54B663712}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB53F8AA-6768-4DEE-8BBB-3FD54B663712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3F0582B-1078-4672-A1B0-0621344EF136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F0582B-1078-4672-A1B0-0621344EF136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F0582B-1078-4672-A1B0-0621344EF136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F0582B-1078-4672-A1B0-0621344EF136}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
