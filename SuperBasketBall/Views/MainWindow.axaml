@@ -6,15 +6,86 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="SuperBasketBall.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/supbasket.ico"
         Title="SuperBasketBall">
+    <DockPanel 
+        Name="Panel"
+        LastChildFill="True">
+        <TextBlock
+            DockPanel.Dock="Top"
+            Text="Окно данных">
+        </TextBlock>
+        <Label
+            Name="Label"
+            DockPanel.Dock="Bottom" Content="Операция выполнена успешно"
+            HorizontalAlignment="Center"
+            Background="Chartreuse"
+            IsVisible="False">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+        </Label>
+        <Image Source="/Assets/supbasket.ico" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30 0 "
+               Height="50" Width="50" DockPanel.Dock="Top">
+        </Image>
+        <TabControl>
+            <TabItem
+                Header="Игроки">
+                <Grid VerticalAlignment="Top">
+                    <DataGrid
+                        Margin="0 30 0 0"
+                        Name="DataGrid" x:CompileBindings="False" Foreground="Black" Background="Azure" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn
+                                Header="Позиция" Binding="{Binding PositionName}" />
+                            <DataGridTextColumn
+                                Header="Имя игрока" Binding="{Binding PlayerName}" />
+                            <DataGridTextColumn
+                                Header="Вес" Binding="{Binding Weight, StringFormat=кг}" />
+                            <DataGridTextColumn
+                                Header="Рост" Binding="{Binding Height, StringFormat=cm}" />
+                            <DataGridTextColumn
+                                Header="Дата рождения" Binding="{Binding BirthDate}" />
+                            <DataGridTextColumn
+                                Header="Дата начала" Binding="{Binding BeginDate}" />
+                            <DataGridTextColumn
+                                Header="Команда" Binding="{Binding TeamName}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Panel
+                        VerticalAlignment="Top">
+                        <Button Name="DelButton" HorizontalContentAlignment="Center" Width="100" Content="Удалить" Margin="00 0" Click="DelButton_OnClick">
+                        </Button>
+                        <Button Name="RedButton" HorizontalContentAlignment="Center" Width="100" Content="Изменить" Margin="100 0" Click="RedButton_OnClick">
+                        </Button>
+                        <ComboBox x:CompileBindings="False" Name="FillComboBox" DisplayMemberBinding="{Binding PositionName}" Width="100" Margin="200 0">
+                        </ComboBox>
+                        <TextBox
+                            Name="SerTextBox" Width="100" HorizontalAlignment="Left" Margin="300 0 " TextChanging="SerTextBox_OnTextChanging">
+                        </TextBox>
+                    </Panel>
+                </Grid>
+            </TabItem>
+            <TabItem
+                Header="Позиции">
+                <Grid VerticalAlignment="Top">
+                    <DataGrid Margin="0 30 0 0" Name="DataGrid2" x:CompileBindings="False" Foreground="Black" Background="Azure">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Идентификатор" />
+                            <DataGridTextColumn Header="Позиция" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem
+                Header="Команды">
+                <Grid VerticalAlignment="Top">
+                    <DataGrid Margin="0 30 0 0" Name="DataGrid3" x:CompileBindings="False" Foreground="Black" Background="Azure">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Идентификатор" />
+                            <DataGridTextColumn Header="Команда" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>

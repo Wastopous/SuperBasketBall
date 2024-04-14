@@ -1,0 +1,57 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:SuperBasketBall.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="250"
+        x:Class="SuperBasketBall.Views.RedWin"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/supbasket.ico"
+        Title="SuperBasketBall"
+         Width="700"
+        Height="600"
+        WindowStartupLocation="CenterOwner">
+    <DockPanel HorizontalAlignment="Center"
+        Name="Panel"
+        LastChildFill="True">
+        <TextBlock
+            DockPanel.Dock="Top"
+            Text="Окно редактирования">
+        </TextBlock>
+        <Image Source="/Assets/supbasket.ico" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30 0 "
+               Height="50" Width="50" DockPanel.Dock="Top">
+        </Image>
+        <StackPanel>
+            <TextBox 
+                Name="newPlayerName">
+            </TextBox>
+            <TextBox 
+                Name="newWeight">
+            </TextBox>
+            <TextBox 
+                Name="newHeight">
+            </TextBox>
+            <DatePicker 
+                Name="BirthPicker">
+            </DatePicker>
+            <DatePicker 
+                Name="BeginPicker">
+            </DatePicker>
+            <ComboBox
+                Name="Pos"></ComboBox>
+            <ComboBox
+                Name="Team"></ComboBox>
+            <Button
+                Name="Save"
+                Content="Изменить"
+                Click="Save_OnClick">
+                        
+            </Button>
+            <Button
+                Name="Canc"
+                Content="Отмена"
+                Click="Canc_OnClick">
+            </Button>
+        </StackPanel>
+        </DockPanel>
+</Window>

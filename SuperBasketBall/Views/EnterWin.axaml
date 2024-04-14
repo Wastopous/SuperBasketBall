@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:SuperBasketBall.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="250"
+        x:Class="SuperBasketBall.Views.EnterWin"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/supbasket.ico"
+        Title="SuperBasketBall"
+         Width="200"
+        Height="200"
+        WindowStartupLocation="CenterOwner">
+    <DockPanel HorizontalAlignment="Center"
+        Name="Panel"
+        LastChildFill="True">
+        <TextBlock
+            DockPanel.Dock="Top"
+            Text="Окно входа">
+        </TextBlock>
+        <Image Source="/Assets/supbasket.ico" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30 0 "
+               Height="50" Width="50" DockPanel.Dock="Top">
+        </Image>
+    <StackPanel HorizontalAlignment="Center" Margin="0 35">
+        <TextBlock Text="Войти как"></TextBlock>
+        <Button Name="Admin" Content="Администратор"
+                Click="Admin_OnClick">
+            
+        </Button>
+        <Button Name="Manager"  Content="Менеджер"
+                Click="Manager_OnClick">
+
+        </Button>
+    </StackPanel>
+        </DockPanel>
+</Window>
